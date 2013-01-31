@@ -177,6 +177,8 @@ abbreviations.
     class Message
       #Extend and/or Include
       include ActiveAttr::Model
+      
+      # Delegations
 
       # Attributes and/or associations
       attribute :name
