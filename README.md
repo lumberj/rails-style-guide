@@ -725,9 +725,6 @@ look around a bit for existing solutions, before unrolling your
 own. Here's a list of some "priceless" gems (all of them Rails 3.1
 compliant) that are useful in many Rails projects:
 
-* [active_admin](https://github.com/gregbell/active_admin) - With ActiveAdmin
-  the creation of admin interface for your Rails app is child's play. You get a
-  nice dashboard, CRUD UI and lots more. Very flexible and customizable.
 * [better_errors](https://github.com/charliesome/better_errors) - Better Errors replaces 
   the standard Rails error page with a much better and more useful error page. It is also
   usable outside of Rails in any Rack app as Rack middleware.
