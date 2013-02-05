@@ -175,18 +175,24 @@ abbreviations.
 
     ```Ruby
     class Message
-      #Extend and/or Include
+      # Constants
+      EXCELLENT_STYLE_CHOICES = true
+
+      # Modules
       include ActiveAttr::Model
       
       # Delegations
 
-      # Attributes and/or associations
+      # Attributes
       attribute :name
       attribute :email
       attribute :content
       attribute :priority
 
       attr_accessible :name, :email, :content
+      
+      # Associations
+      has_many :devotees
       
       #Scopes
       
@@ -196,6 +202,7 @@ abbreviations.
       validates_length_of :content, :maximum => 500
       
       #Callbacks
+      after_save :world_domination
     end
     ```
 
