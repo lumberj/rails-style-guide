@@ -1068,6 +1068,16 @@ they will retry the match for given timeout allowing you to test ajax actions.
     article = mock_model(Article).as_null_object
     ```
 
+* Avoid the use of OpenStruct. Use stubs instead. This is helpful in debugging because stubs can be given descriptive names
+
+   ```Ruby
+   > stub(:the_something_stub, method1: true, method2: "bla").inspect
+   #=> #<RSpec::Mocks::Mock:0x3fc62389a610 @name=:the_something_stub>
+   
+   > OpenStruct.new.inspect
+   #=> #<OpenStruct>
+   ```
+
 * Use `let` blocks instead of `before(:each)` blocks to create data for
   the spec examples. `let` blocks get lazily evaluated.
 
